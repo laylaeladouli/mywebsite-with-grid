@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layla el adouli</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <strong><em>Layla El Adouli</em></strong>
+      </h1>
+      <nav class="navbar clearfix">
+        <ul class="toggle" id="myLinks">
+          <li><a href="index.html">Home</a></li>
+          <li class="active" href="overmij.html">Over mij</li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="projecten.html"> Projecten</a></li>
+          <li><a href="werkplek.html"> Werkplek</a></li>
+        </ul>
+         <a
+          href="javascript:void0;"
+          class="nav-icon"
+          onclick="toggle('myLinks')"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+    <main>
+      
+      <h2>Wie ben ik ?</h2>
+
+      <p>
+        Ik ben Layla El Adouli , ik kom uit Marokko . Ik woon nu in België en
+        dit is mijn eerst jaar aan
+        <a href="http://www.thomasmore.be"><strong>Thomas More Hogeschool</strong></a> .
+      </p>
+      <p>Ik volg de richting graduaat programmeren aan Thomas More .</p>
+      <p>
+        Ik ben naar België gekomen om deze specialiteit te studeren omdat het
+        opleidingsniveau hier erg hoog is . De kansen op werk zijn ook groot .
+      </p>
+      <p>
+        Toen ik in Marokko was, werkte ik als bakker ,gespecialiseerd in het
+        maken van traditionele Marokkaanse zoetigheden .Ik ben ermee begonnen
+        als hobby en ik ben daarna in dit vakgebied gaan werken .
+      </p>
+      <p>
+        Ik hoop tegen het einde van deze richting een bekwaam programmeur te
+        zijn .
+      </p>
+      <h2>Naar CV</h2>
+      <p>Hier vindt u mijn <a href="cv.html"><strong>CV</strong></a> .</p>
+      
+    </main>
+    <footer><small>&copy; 2023 - Layla El Adouli</small></footer>
+     <script>
+      // This script toggles the visibility of the element with the id el
+      // put this in the onclick property of a link or button.
+      function toggle(el) {
+        var hide = document.getElementById(el);
+        if (hide.style.display === "block") {
+          hide.style.display = "none";
+        } else {
+          hide.style.display = "block";
+        }
+      }
+
+      // Luister naar schermgrootte veranderingen
+      window.onresize = function () {
+        var hide = document.getElementById("myLinks");
+        if (window.innerWidth >= 760) {
+          hide.style.display = "block"; // Zorg ervoor dat de links worden getoond op grotere schermen
+        } else {
+          hide.style.display = "none"; // Verberg links op kleinere schermen
+        }
+      };
+    </script>
+  </body>
+</html>

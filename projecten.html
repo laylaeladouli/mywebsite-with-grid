@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layla El Adouli</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <strong><em>Layla El Adouli</em></strong>
+      </h1>
+      <nav class="navbar clearfix">
+        <ul class="toggle" id="myLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="overmij.html">Over mij</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="active" href="projecten.html">Projecten</li>
+          <li><a href="werkplek.html"> Werkplek</a></li>
+        </ul>
+        <a
+          href="javascript:void0;"
+          class="nav-icon"
+          onclick="toggle('myLinks')"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <h2>Mijn volgende projecten.</h2>
+
+      <div class="card-container">
+        <div class="card">
+          <figure class="card-img">
+            <img src="photobootstrap.jpg" alt="Card Image" />
+          </figure>
+          <div class="card-content">
+            <h2 class="card-title">Project 1</h2>
+            <a href="project1.html" class="card-btn">klik hier</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <figure class="card-img">
+            <img src="fotowebsite.jpg" alt="Card Image" />
+          </figure>
+          <div class="card-content">
+            <h2 class="card-title">Project 2</h2>
+            <a href="project1.html" class="card-btn">klik hier</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <figure class="card-img">
+            <img src="1234.jpg" alt="Card Image" />
+          </figure>
+          <div class="card-content">
+            <h2 class="card-title">Project 3</h2>
+            <a href="project1.html" class="card-btn">klik hier</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><small>&copy; 2023 - Layla El Adouli</small></footer>
+    <script>
+      // This script toggles the visibility of the element with the id el
+      // put this in the onclick property of a link or button.
+      function toggle(el) {
+        var hide = document.getElementById(el);
+        if (hide.style.display === "block") {
+          hide.style.display = "none";
+        } else {
+          hide.style.display = "block";
+        }
+      }
+
+      // Luister naar schermgrootte veranderingen
+      window.onresize = function () {
+        var hide = document.getElementById("myLinks");
+        if (window.innerWidth >= 760) {
+          hide.style.display = "block"; // Zorg ervoor dat de links worden getoond op grotere schermen
+        } else {
+          hide.style.display = "none"; // Verberg links op kleinere schermen
+        }
+      };
+    </script>
+  </body>
+</html>

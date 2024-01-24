@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layla El Adouli</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <strong><em>Layla El Adouli</em></strong>
+      </h1>
+      <nav class="navbar clearfix">
+        <ul class="toggle" id="myLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="overmij.html">Over mij</a></li>
+          <li class="active" href="contact.html">Contact</li>
+          <li><a href="projecten.html"> Projecten</a></li>
+          <li><a href="werkplek.html"> Werkplek</a></li>
+        </ul>
+        <a
+          href="javascript:void0;"
+          class="nav-icon"
+          onclick="toggle('myLinks')"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <h2>Contactgegevens:</h2>
+
+      <a
+        class="a-github"
+        href="https://github.com/laylaeladouli"
+        target="_blank"
+      >
+        <i class="fab fa-github"></i> Visit my GitHub Profile</a
+      >
+
+      <form action="mailform.php" method="post">
+        <ul>
+          <li>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+          </li>
+          <li>
+            <label for="email">Email:</label>
+            <input type="email" id="mail" name="email" />
+          </li>
+          <li>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+          </li>
+          <li class="button">
+            <button type="submit">Send message</button>
+          </li>
+        </ul>
+      </form>
+    </main>
+    <footer><small>&copy; 2023 - Layla El Adouli</small></footer>
+    <script>
+      // This script toggles the visibility of the element with the id el
+      // put this in the onclick property of a link or button.
+      function toggle(el) {
+        var hide = document.getElementById(el);
+        if (hide.style.display === "block") {
+          hide.style.display = "none";
+        } else {
+          hide.style.display = "block";
+        }
+      }
+
+      // Luister naar schermgrootte veranderingen
+      window.onresize = function () {
+        var hide = document.getElementById("myLinks");
+        if (window.innerWidth >= 760) {
+          hide.style.display = "block"; // Zorg ervoor dat de links worden getoond op grotere schermen
+        } else {
+          hide.style.display = "none"; // Verberg links op kleinere schermen
+        }
+      };
+    </script>
+  </body>
+</html>
